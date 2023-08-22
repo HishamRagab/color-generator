@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e91e6333;
+}
+h1 {
+  font-family: system-ui;
+  text-align: center;
+  padding: 30px;
+  text-transform: capitalize;
+  font-size: 55px;
+  font-weight: 900;
+  color: #e91e63;
+  text-shadow: -0.0625em 0.0625em 0px white,
+    calc(-0.0625em - 0.025em) calc(0.0625em + 0.025em) 0px lightblue;
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 574px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+.container {
+  padding: 25px;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  max-width: 1140px;
+  grid-template-columns: repeat(6, 1fr);
+}
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 574px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.container .box {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px;
+  box-shadow: 0px 0px 10px #999999;
+  cursor: pointer;
+}
+.container .box.copied {
+  animation: pipo 0.3s 1;
+}
+@keyframes pipo {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container .box .background {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.container .box .color {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-family: monospace;
+  color: #4b4b4b;
+  transition: 0.2s;
+}
+button {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  padding: 13px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  background-color: #ee4f84;
+  color: white;
+  border: 2px solid white;
+  font-size: 17px;
+  font-family: system-ui;
+  font-weight: 600;
+  border-radius: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  box-shadow: 0px 15px 15px #e91e6333;
+  transition: 0.2s;
+  text-shadow: 0px 0px 2px black;
+}
+button:hover {
+  background-color: #e91e63;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e91e63;
+}
